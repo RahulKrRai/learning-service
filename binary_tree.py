@@ -469,7 +469,7 @@ locode_map  = {
 "JPNGO": "+09"
 }
 
-downloads_path = os.path.expanduser("~/Downloads/ocean-2025-07-14-2026-04-30.csv")
+downloads_path = os.path.expanduser("~/Downloads/ocean-2025-07-14-2026-04-301.csv")
 sheet_name = 'sheet1'
 # Final result map
 keys_map = [("PORT_OF_LOAD", "PLANNED_DEPARTURE_DATE"),
@@ -518,8 +518,8 @@ df["ORDER_CREATION_DATE"] = pd.to_datetime(
 
 # df = df[~df["PORT_OF_LOAD"].isin(["ESBCN", "MAPTM", "NLRTM", "NLMOE", "SIKOP", "BEANR", "DEBRV", "DEHAM", "DEWHV", "DEWVN", "AESHJ"])]
 # df = df[~df["CURRENT_STATUS"].isin(["CANCELLED", "NOT_TRACKABLE_SCAC_NOT_SUPPORTED", "NOT_TRACKABLE_CONTAINER_NOT_SUPPORTED_BY_OCEAN_CARRIER"])]
-
-# df = df[df["CONTAINER_REFERENCE"].isin(container_ids)]
+container_ids = ["TCLU9150400"]
+df = df[df["CONTAINER_REFERENCE"].isin(container_ids)]
 
 df1 = df[df["CURRENT_STATUS"] == "COMPLETED"].copy()
 df2 = df[df["CURRENT_STATUS"] != "COMPLETED"].copy()
@@ -529,8 +529,8 @@ missed_locode = {}
 
 def split_with_padding(value):
     # Replace 'null' with empty
-
     value = str(value).replace("null", "").strip()
+    value = str(value).replace("nan", "").strip()
 
     # Split by comma
     parts = [p.strip() for p in value.split(",")]
@@ -589,53 +589,53 @@ def update_row_in_logward_format(new_row):
     row = new_row.copy()  # Create a copy of the row to avoid modifying the original DataFrame
     row["Carrier Updated Location POL Name"] = row["PORT_OF_LOAD"].split('(')[1].replace(')', '').replace('(',
                                                                                                      '') if pd.notnull(
-        row["PORT_OF_LOAD"]) else None
+        row["PORT_OF_LOAD"]) else ""
     row["Carrier Updated Location POD Name"] = row["PORT_OF_DISCHARGE"].split('(')[1].replace(')', '').replace('(',
                                                                                                           '') if pd.notnull(
-        row["PORT_OF_DISCHARGE"]) else None
+        row["PORT_OF_DISCHARGE"]) else ""
     row["Depot Pre Location"] = row["GATE_OUT_EMPTY_PLACE"].split('(')[1].replace(')', '').replace('(',
                                                                                                    '') if pd.notnull(
-        row["GATE_OUT_EMPTY_PLACE"]) else None
+        row["GATE_OUT_EMPTY_PLACE"]) else ""
     row["Depot Pre Country"] = row["GATE_OUT_EMPTY_PLACE"].split('(')[0][:2] if pd.notnull(
-        row["GATE_OUT_EMPTY_PLACE"]) and len(row["GATE_OUT_EMPTY_PLACE"].split('(')) > 0 else None
+        row["GATE_OUT_EMPTY_PLACE"]) and len(row["GATE_OUT_EMPTY_PLACE"].split('(')) > 0 else ""
     row["Depot On Location"] = row["GATE_IN_EMPTY_PLACE"].split('(')[1].replace(')', '').replace('(', '') if pd.notnull(
-        row["GATE_IN_EMPTY_PLACE"]) else None
+        row["GATE_IN_EMPTY_PLACE"]) else ""
     row["Depot On Country"] = row["GATE_IN_EMPTY_PLACE"].split('(')[0][:2] if pd.notnull(
-        row["GATE_IN_EMPTY_PLACE"]) and len(row["GATE_IN_EMPTY_PLACE"].split('(')) > 0 else None
+        row["GATE_IN_EMPTY_PLACE"]) and len(row["GATE_IN_EMPTY_PLACE"].split('(')) > 0 else ""
     row["TS Port 1 Name"] = row["FIRST_TRANSSHIPMENT_ARRIVE_PLACE"].split('(')[1].replace(')', '').replace('(', '') if pd.notnull(
-        row["FIRST_TRANSSHIPMENT_ARRIVE_PLACE"]) else None
+        row["FIRST_TRANSSHIPMENT_ARRIVE_PLACE"]) else ""
     row["FIRST_TRANSSHIPMENT_LOAD_PLACE_Name"] = row["FIRST_TRANSSHIPMENT_LOAD_PLACE"]
     row["FIRST_TRANSSHIPMENT_DEPART_PLACE_Name"] = row["FIRST_TRANSSHIPMENT_DEPART_PLACE"]
     row['TS Port 2 Name'] = row["LAST_TRANSSHIPMENT_ARRIVE_PLACE"].split('(')[1].replace(')', '').replace('(', '') if pd.notnull(
-        row["LAST_TRANSSHIPMENT_ARRIVE_PLACE"]) else None
+        row["LAST_TRANSSHIPMENT_ARRIVE_PLACE"]) else ""
     row["LAST_TRANSSHIPMENT_UNLOAD_PLACE_Name"] = row["LAST_TRANSSHIPMENT_UNLOAD_PLACE"]
     row["LAST_TRANSSHIPMENT_LOAD_PLACE_Name"] = row["LAST_TRANSSHIPMENT_LOAD_PLACE"]
     row["LAST_TRANSSHIPMENT_DEPART_PLACE_Name"] = row["LAST_TRANSSHIPMENT_DEPART_PLACE"]
     # row["Destination On Location"] = row["DESTINATION_ARRIVE_PLACE"].split(' ')[1].replace(')', '').replace('(', '')
     # row["Destination On Country"] = row["DESTINATION_ARRIVE_PLACE"].split(' ')[0][:2]
     row["Destination On Location"] = str(row["DESTINATION_ARRIVE_PLACE"]).split('(')[1].replace(')', '').replace(
-        '(', '') if pd.notna(row["DESTINATION_ARRIVE_PLACE"]) else None
+        '(', '') if pd.notna(row["DESTINATION_ARRIVE_PLACE"]) else ""
     row["Destination On Country"] = str(row["DESTINATION_ARRIVE_PLACE"]).split('(')[0][:2] if pd.notna(
-        row["DESTINATION_ARRIVE_PLACE"]) and len(str(row["DESTINATION_ARRIVE_PLACE"]).split('(')) > 1 else None
+        row["DESTINATION_ARRIVE_PLACE"]) and len(str(row["DESTINATION_ARRIVE_PLACE"]).split('(')) > 1 else ""
 
     POL_vessel_names = split_with_padding(row["VESSEL_NAME_LIST"])
-    row["Vessel 1"] = POL_vessel_names[0] or None
-    row["Vessel 2"] = POL_vessel_names[1] or None
-    row["Vessel 3"] = POL_vessel_names[2] or None
+    row["Vessel 1"] = POL_vessel_names[0] or ""
+    row["Vessel 2"] = POL_vessel_names[1] or ""
+    row["Vessel 3"] = POL_vessel_names[2] or ""
     # print(row["VESSEL_IMO_LIST"])
     VESSEL_imo_list = split_with_padding(row["VESSEL_IMO_LIST"])
-    # Use None for empty IMO so Excel has empty cells; "" would be parsed as NaN in Node (e.g. parseInt(""))
-    row["POL Vessel IMO"] = VESSEL_imo_list[0] or None
-    row["Leg 2 Vessel IMO"] = VESSEL_imo_list[1] or None
-    row["Leg 5 Vessel IMO"] = VESSEL_imo_list[2] or None
+    # Use "" for empty IMO so Excel has empty cells; "" would be parsed as NaN in Node (e.g. parseInt(""))
+    row["POL Vessel IMO"] = VESSEL_imo_list[0] or ""
+    row["Leg 2 Vessel IMO"] = VESSEL_imo_list[1] or ""
+    row["Leg 5 Vessel IMO"] = VESSEL_imo_list[2] or ""
     # row["Pick Up Origin Location"] = row["INLAND_ORIGIN_PLACE"].split(' ')[1].replace(')', '').replace('(', '')
     # row["Pick Up Origin Country"] = row["INLAND_ORIGIN_PLACE"].split(' ')[0][:2]
     inland_origin_place = str(row["INLAND_ORIGIN_PLACE"]) if pd.notna(row["INLAND_ORIGIN_PLACE"]) else ""
     origin_place_parts = inland_origin_place.split('(')
 
     row["Pick Up Origin Location"] = origin_place_parts[1].replace(')', '').replace('(', '') if len(
-        origin_place_parts) > 1 else None
-    row["Pick Up Origin Country"] = origin_place_parts[0][:2] if len(origin_place_parts) > 0 else None
+        origin_place_parts) > 1 else ""
+    row["Pick Up Origin Country"] = origin_place_parts[0][:2] if len(origin_place_parts) > 0 else ""
     # row["Concat (Container +MBL)"] = str(row["CONTAINER_REFERENCE"]) + str(row["BILL_OF_LADING_LIST"])
     row["Concat (Container +MBL)"] = (
             ("" if pd.isna(row["CONTAINER_REFERENCE"]) else str(row["CONTAINER_REFERENCE"])) +
@@ -655,6 +655,8 @@ print(missed_locode)
 # df = df.apply(update_row_in_logward_format, axis=1, result_type='expand')
 df1 = df1.apply(update_row_in_logward_format, axis=1, result_type='expand')
 df2 = df2.apply(update_row_in_logward_format, axis=1, result_type='expand')
+current_time2 = datetime.now()
+print(f"Logward format Done at {(current_time2 - current_time).total_seconds()}s")
 
 # Replace NaN with empty string
 df1 = df1.fillna("")
@@ -662,6 +664,8 @@ df2 = df2.fillna("")
 # write to excel in reverse order
 df1 = df1.iloc[::-1].reset_index(drop=True)
 df2 = df2.iloc[::-1].reset_index(drop=True)
+current_time3 = datetime.now()
+print(f"Reset index Done at {(current_time3 - current_time).total_seconds()}s")
 
 # Save back to Excel in chunks of 2000 rows each
 CHUNK_SIZE = 2000
