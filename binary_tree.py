@@ -469,7 +469,7 @@ locode_map  = {
 "JPNGO": "+09"
 }
 
-downloads_path = os.path.expanduser("~/Downloads/ocean-2025-07-14-2026-04-301.csv")
+downloads_path = os.path.expanduser("~/Downloads/ocean-2025-07-14-2026-04-30.csv")
 sheet_name = 'sheet1'
 # Final result map
 keys_map = [("PORT_OF_LOAD", "PLANNED_DEPARTURE_DATE"),
@@ -517,9 +517,9 @@ df["ORDER_CREATION_DATE"] = pd.to_datetime(
 # )
 
 # df = df[~df["PORT_OF_LOAD"].isin(["ESBCN", "MAPTM", "NLRTM", "NLMOE", "SIKOP", "BEANR", "DEBRV", "DEHAM", "DEWHV", "DEWVN", "AESHJ"])]
-# df = df[~df["CURRENT_STATUS"].isin(["CANCELLED", "NOT_TRACKABLE_SCAC_NOT_SUPPORTED", "NOT_TRACKABLE_CONTAINER_NOT_SUPPORTED_BY_OCEAN_CARRIER"])]
-container_ids = ["TCLU9150400"]
-df = df[df["CONTAINER_REFERENCE"].isin(container_ids)]
+df = df[~df["CURRENT_STATUS"].isin(["CANCELLED", "NOT_TRACKABLE_SCAC_NOT_SUPPORTED", "NOT_TRACKABLE_CONTAINER_NOT_SUPPORTED_BY_OCEAN_CARRIER", "ORDER_NOT_TRACKABLE"])]
+# container_ids = ["TAWU4006127"]
+# df = df[df["CONTAINER_REFERENCE"].isin(container_ids)]
 
 df1 = df[df["CURRENT_STATUS"] == "COMPLETED"].copy()
 df2 = df[df["CURRENT_STATUS"] != "COMPLETED"].copy()
@@ -643,6 +643,36 @@ def update_row_in_logward_format(new_row):
     )
     return row
 
+
+def expand_rows_for_bol(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    If BILL_OF_LADING_LIST is comma-separated, create one row per B/L value.
+    """
+    if "BILL_OF_LADING_LIST" not in df.columns:
+        return df
+
+    tmp_col = "__bol_list"
+
+    def _to_list(val):
+        s = "" if pd.isna(val) else str(val)
+        parts = [p.strip() for p in s.split(",")] if "," in s else [s.strip()]
+        return [p for p in parts if p] or [""]
+
+    df = df.copy()
+    df[tmp_col] = df["BILL_OF_LADING_LIST"].apply(_to_list)
+    df = df.explode(tmp_col).reset_index(drop=True)
+    df["BILL_OF_LADING_LIST"] = df[tmp_col]
+    df.drop(columns=[tmp_col], inplace=True)
+
+    # Rebuild concatenated field now that B/L is per-row
+    if "CONTAINER_REFERENCE" in df.columns:
+        df["Concat (Container +MBL)"] = (
+                ("" if df["CONTAINER_REFERENCE"].isna().all() else df["CONTAINER_REFERENCE"].astype(str).fillna("")) +
+                df["BILL_OF_LADING_LIST"].astype(str).fillna("")
+        )
+
+    return df
+
 for loc_col, ts_col in keys_map:
     # df[ts_col] = df.apply(lambda row: apply_offset(row, loc_col, ts_col), axis=1)
     df1[ts_col] = df1.apply(lambda row: apply_offset(row, loc_col, ts_col), axis=1)
@@ -655,8 +685,13 @@ print(missed_locode)
 # df = df.apply(update_row_in_logward_format, axis=1, result_type='expand')
 df1 = df1.apply(update_row_in_logward_format, axis=1, result_type='expand')
 df2 = df2.apply(update_row_in_logward_format, axis=1, result_type='expand')
+
+# Duplicate rows for comma-separated BILL_OF_LADING_LIST
+df1 = expand_rows_for_bol(df1)
+df2 = expand_rows_for_bol(df2)
+
 current_time2 = datetime.now()
-print(f"Logward format Done at {(current_time2 - current_time).total_seconds()}s")
+print(f"Logward format + B/L expansion done at {(current_time2 - current_time).total_seconds()}s")
 
 # Replace NaN with empty string
 df1 = df1.fillna("")
