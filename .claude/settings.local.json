@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import pandas as pd; df = pd.read_excel\\(''container_not_completed_ocean-2025-07-14-2026-04-30_part1_vipul.xlsx''\\); print\\(df.columns.tolist\\(\\)\\); print\\(df.shape\\); print\\(df.head\\(3\\).to_string\\(\\)\\)\")",
+      "Bash(ls /Users/rahul/Desktop/Logward/learning-service/*.xlsx)",
+      "Read(//Users/rahul/Desktop/Logward/**)",
+      "WebFetch(domain:www.interviewquery.com)",
+      "WebFetch(domain:leetcode.com)",
+      "WebFetch(domain:www.teamblind.com)",
+      "WebSearch"
+    ]
+  }
+}
