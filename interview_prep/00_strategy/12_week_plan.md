@@ -39,15 +39,15 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Arrays, Hashing, Two Pointers — wake the muscle up.**
 
 - **Code** (heaviest):
-  - [Arrays & Hashing](../01_dsa/patterns/01_arrays_hashing.md) — frequency maps, prefix sums, in-place tricks.
-  - [Two Pointers](../01_dsa/patterns/02_two_pointers.md) — sorted-array convergence, fast/slow.
+  - [Arrays & Hashing](../01_dsa/patterns/02_hashing_frequency.md) — frequency maps, prefix sums, in-place tricks.
+  - [Two Pointers](../01_dsa/patterns/01_two_pointers_sliding_window.md) — sorted-array convergence, fast/slow.
   - Reps: [Two Sum](https://leetcode.com/problems/two-sum/) (FREE), [3Sum](https://leetcode.com/problems/3sum/) (FREE), [Container With Most Water](https://leetcode.com/problems/container-with-most-water/) (FREE), [Group Anagrams](https://leetcode.com/problems/group-anagrams/) (FREE).
   - Free video: [NeetCode — Arrays & Hashing](https://neetcode.io/roadmap) and search [takeUforward arrays playlist](https://www.youtube.com/results?search_query=takeuforward+arrays+playlist).
   - **Target: 12-15 problems this week** (easy/medium, re-grooving syntax). Hand-write in a plain doc once — Google bans autocomplete.
 - **Design:**
-  - [SD Interview Framework](../02_system_design/00_framework.md) — the 6-step loop (requirements → estimates → API → data model → high-level → deep-dive/bottlenecks). Read [System Design Primer](https://github.com/donnemartin/system-design-primer) intro + [Hello Interview delivery framework](https://www.hellointerview.com).
+  - [SD Interview Framework](../02_system_design/framework_and_estimation.md) — the 6-step loop (requirements → estimates → API → data model → high-level → deep-dive/bottlenecks). Read [System Design Primer](https://github.com/donnemartin/system-design-primer) intro + [Hello Interview delivery framework](https://www.hellointerview.com).
 - **Behavioral:**
-  - [Story Bank](../03_behavioral/01_story_bank.md) — brain-dump every project from the last 7 yrs into raw bullets (don't polish yet). Aim for 12-15 candidate stories.
+  - [Story Bank](../03_behavioral/story_bank.md) — brain-dump every project from the last 7 yrs into raw bullets (don't polish yet). Aim for 12-15 candidate stories.
 - **Mock:** none.
 - **Apply:** none — but **create/refresh your LeetCode, build a tracking sheet** for applications.
 
@@ -57,14 +57,14 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Sliding Window, Stack, Binary Search.**
 
 - **Code:**
-  - [Sliding Window](../01_dsa/patterns/03_sliding_window.md), [Stack](../01_dsa/patterns/04_stack.md), [Binary Search](../01_dsa/patterns/05_binary_search.md).
+  - [Sliding Window](../01_dsa/patterns/01_two_pointers_sliding_window.md), [Stack](../01_dsa/patterns/04_stack_monotonic.md), [Binary Search](../01_dsa/patterns/03_binary_search.md).
   - Reps: [Best Time to Buy/Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) (FREE), [Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/) (FREE), [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) (FREE), [Search in Rotated Sorted Array](https://leetcode.com/problems/search-in-rotated-sorted-array/) (FREE), [Min Stack](https://leetcode.com/problems/min-stack/) (FREE).
   - Free video: [NeetCode practice list](https://neetcode.io/practice).
   - **Target: 12-15 problems.**
 - **Design:**
-  - [SD Building Blocks](../02_system_design/01_building_blocks.md) — load balancers, caching, DB replication/sharding, CAP. Free: [ByteByteGo YouTube](https://www.youtube.com/results?search_query=bytebytego+system+design).
+  - [SD Building Blocks](../02_system_design/fundamentals.md) — load balancers, caching, DB replication/sharding, CAP. Free: [ByteByteGo YouTube](https://www.youtube.com/results?search_query=bytebytego+system+design).
 - **Behavioral:**
-  - [Amazon Leadership Principles](../03_behavioral/02_amazon_leadership_principles.md) — map 2-3 of your raw stories to each of the 16 LPs (Ownership, Bias for Action, Dive Deep, Deliver Results first).
+  - [Amazon Leadership Principles](../03_behavioral/amazon_leadership_principles.md) — map 2-3 of your raw stories to each of the 16 LPs (Ownership, Bias for Action, Dive Deep, Deliver Results first).
 - **Mock:** none.
 - **Apply:** none — start tailoring the resume for backend/distributed-systems roles.
 
@@ -74,13 +74,13 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Linked Lists, Trees, Heaps + estimation math.**
 
 - **Code:**
-  - [Linked List](../01_dsa/patterns/06_linked_list.md), [Trees / BST](../01_dsa/patterns/07_trees.md), [Heap / Priority Queue](../01_dsa/patterns/08_heap_priority_queue.md).
+  - [Linked List](../01_dsa/patterns/05_linked_list.md), [Trees / BST](../01_dsa/patterns/06_trees_bst.md), [Heap / Priority Queue](../01_dsa/patterns/08_heap_topk_mergek.md).
   - Reps: [Reverse Linked List](https://leetcode.com/problems/reverse-linked-list/) (FREE), [Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/) (FREE), [LRU Cache](https://leetcode.com/problems/lru-cache/) (FREE), [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/) (FREE), [Kth Largest Element in an Array](https://leetcode.com/problems/kth-largest-element-in-an-array/) (FREE), [Merge k Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) (FREE).
   - **Target: 12-15 problems.**
 - **Design:**
-  - [Back-of-Envelope Estimation](../02_system_design/02_estimation.md) — QPS, storage, bandwidth napkin math. Free: System Design Primer "appendix — powers of two / latency numbers."
+  - [Back-of-Envelope Estimation](../02_system_design/framework_and_estimation.md) — QPS, storage, bandwidth napkin math. Free: System Design Primer "appendix — powers of two / latency numbers."
 - **Behavioral:**
-  - [STAR Template](../03_behavioral/03_star_template.md) — convert your **top 6 stories** into tight STAR form (Situation 1 line, Task 1 line, Action 60%, Result quantified).
+  - [STAR Template](../03_behavioral/README.md) — convert your **top 6 stories** into tight STAR form (Situation 1 line, Task 1 line, Action 60%, Result quantified).
 - **Mock:** none.
 - **Apply:** none — finalize the bank-targeted resume; line up referrals for Confluent/Uber/Google.
 
@@ -90,13 +90,13 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Backtracking + Intervals; close out the fundamentals; APPLY TO BANKS.**
 
 - **Code:**
-  - [Backtracking](../01_dsa/patterns/09_backtracking.md), [Intervals](../01_dsa/patterns/10_intervals.md).
+  - [Backtracking](../01_dsa/patterns/13_backtracking.md), [Intervals](../01_dsa/patterns/14_intervals_sweep_line.md).
   - Reps: [Subsets](https://leetcode.com/problems/subsets/) (FREE), [Combination Sum](https://leetcode.com/problems/combination-sum/) (FREE), [Permutations](https://leetcode.com/problems/permutations/) (FREE), [Merge Intervals](https://leetcode.com/problems/merge-intervals/) (FREE), [Insert Interval](https://leetcode.com/problems/insert-interval/) (FREE).
   - **Light Phase-1 retro:** re-attempt any Week 1-3 problem you couldn't finish under time.
 - **Design:**
-  - [Classic Design: URL Shortener / Pastebin](../02_system_design/classic_designs/url_shortener.md) — your first end-to-end rep using the framework. Hash/key-gen, read-heavy caching, DB choice.
+  - [Classic Design: URL Shortener / Pastebin](../02_system_design/classic_designs/03_url_shortener.md) — your first end-to-end rep using the framework. Hash/key-gen, read-heavy caching, DB choice.
 - **Behavioral:**
-  - Polish remaining stories; draft your **2-minute "Tell me about yourself"** in [Story Bank](../03_behavioral/01_story_bank.md).
+  - Polish remaining stories; draft your **2-minute "Tell me about yourself"** in [Story Bank](../03_behavioral/story_bank.md).
 - **Mock:** none (light self-timed problem under 35 min to test readiness).
 - **Apply:** **🎯 MILESTONE — Apply to Goldman Sachs VP & JPMorgan VP now.** These trigger HackerRank OAs (DSA-heavy) — perfect live-fire reps while you're sharp on fundamentals. Treat the OAs as graded mocks. Accept only if >= ~Rs 75-80L; primarily for leverage.
 
@@ -111,13 +111,13 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Graphs (BFS/DFS) — the highest-leverage hard topic. Mocks begin.**
 
 - **Code** (heaviest):
-  - [Graphs — BFS/DFS](../01_dsa/patterns/11_graphs.md) — adjacency repr, grid traversal, connected components, cycle detection.
+  - [Graphs — BFS/DFS](../01_dsa/patterns/09_graph_bfs_dfs.md) — adjacency repr, grid traversal, connected components, cycle detection.
   - Reps: [Number of Islands](https://leetcode.com/problems/number-of-islands/) (FREE), [Clone Graph](https://leetcode.com/problems/clone-graph/) (FREE), [Course Schedule](https://leetcode.com/problems/course-schedule/) (FREE), [Pacific Atlantic Water Flow](https://leetcode.com/problems/pacific-atlantic-water-flow/) (FREE).
   - Free video: [NeetCode — Graphs](https://neetcode.io/roadmap).
 - **Design:**
-  - [Project Design 1 — Multi-Tenant Trigger Service](../02_system_design/project_designs/01_trigger_service.md) — your Logward flagship. Event-driven, tenant isolation, the -60% latency story. This doubles as a behavioral anchor.
+  - [Project Design 1 — Multi-Tenant Trigger Service](../02_system_design/project_designs/2_multitenant_trigger_service.md) — your Logward flagship. Event-driven, tenant isolation, the -60% latency story. This doubles as a behavioral anchor.
 - **Behavioral:**
-  - [Googleyness & Leadership](../03_behavioral/04_googleyness.md) — collaboration, ambiguity, user-focus framing of your stories.
+  - [Googleyness & Leadership](../03_behavioral/per_company_framing.md) — collaboration, ambiguity, user-focus framing of your stories.
 - **Mock:** **🎤 Mock #1 — one timed coding round** (45 min, recorded). Use [Pramp / interviewing.io free peer mocks](https://www.interviewing.io) or a peer. Topic: arrays/graphs.
 - **Apply:** none — chase referrals; prep for the Tier-1 push next week.
 
@@ -127,10 +127,10 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Advanced Graphs (topo sort, Dijkstra, union-find). FIRST Tier-1 apps.**
 
 - **Code:**
-  - [Advanced Graphs](../01_dsa/patterns/12_advanced_graphs.md) — topological sort, Dijkstra, Union-Find, MST.
+  - [Advanced Graphs](../01_dsa/patterns/10_topological_sort.md) — topological sort, Dijkstra, Union-Find, MST.
   - Reps: [Course Schedule II](https://leetcode.com/problems/course-schedule-ii/) (FREE), [Network Delay Time](https://leetcode.com/problems/network-delay-time/) (FREE), [Number of Connected Components](https://leetcode.com/problems/graph-valid-tree/) *(Premium — free alt: [NeetCode Graph Valid Tree](https://neetcode.io/problems/valid-tree))*, [Redundant Connection](https://leetcode.com/problems/redundant-connection/) (FREE).
 - **Design:**
-  - [Project Design 2 — Data Validation & Consistency Layer](../02_system_design/project_designs/02_validation_layer.md) — cross-workflow consistency across distributed services; idempotency, exactly-once-ish semantics, reconciliation.
+  - [Project Design 2 — Real-Time Container Tracking Platform](../02_system_design/project_designs/1_container_tracking_platform.md) — 10M+ records, multi-tenant; deep-dive the data validation/consistency layer, idempotent event ingestion, and reconciliation across distributed workflows.
 - **Behavioral:**
   - Rehearse LP deep-dives out loud; record yourself. Tighten "Dive Deep" + "Deliver Results."
 - **Mock:** **🎤 Mock #2 — coding** (graphs/heap).
@@ -142,14 +142,14 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: Dynamic Programming (1-D). Remaining Tier-1 apps.**
 
 - **Code:**
-  - [Dynamic Programming — 1-D](../01_dsa/patterns/13_dp_1d.md) — you already have local reps (knapsack, coin change, rod cutting, LCS in `DP/`); convert them to interview speed.
+  - [Dynamic Programming — 1-D](../01_dsa/patterns/15_dp_1d.md) — you already have local reps (knapsack, coin change, rod cutting, LCS); convert them to interview speed.
   - Reps: [Climbing Stairs](https://leetcode.com/problems/climbing-stairs/) (FREE), [House Robber](https://leetcode.com/problems/house-robber/) (FREE), [Coin Change](https://leetcode.com/problems/coin-change/) (FREE), [Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/) (FREE), [Word Break](https://leetcode.com/problems/word-break/) (FREE).
   - Free video: [takeUforward DP playlist](https://www.youtube.com/results?search_query=takeuforward+dynamic+programming+playlist), [Aditya Verma DP](https://www.youtube.com/results?search_query=aditya+verma+dynamic+programming).
 - **Design:**
-  - [Project Design 3 — Container Lifecycle Orchestration](../02_system_design/project_designs/03_lifecycle_orchestration.md) — backend orchestration for container lifecycle events; state machines, workflow durability.
+  - [Project Design 3 — Payment Links + Reconciliation](../02_system_design/project_designs/3_payment_links_reconciliation.md) — your 56 AI / Razorpay work; idempotency keys, payment state machine, webhooks, ledger & reconciliation.
 - **Behavioral:**
   - Map each project design above to its STAR story so the design round and behavioral round reinforce each other.
-- **Mock:** **🎤 Mock #3 — system design** (use a project design or [URL shortener](../02_system_design/classic_designs/url_shortener.md)). Free SD mocks via [Hello Interview](https://www.hellointerview.com) / interviewing.io.
+- **Mock:** **🎤 Mock #3 — system design** (use a project design or [URL shortener](../02_system_design/classic_designs/03_url_shortener.md)). Free SD mocks via [Hello Interview](https://www.hellointerview.com) / interviewing.io.
 - **Apply:** **🎯 MILESTONE — Apply to Google (L5), Amazon (insist L6), Atlassian.** Time it so OAs and recruiter screens schedule the onsite loops into Weeks 9-11.
 
 ---
@@ -158,10 +158,10 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: DP (2-D) + Tries; close out the design set.**
 
 - **Code:**
-  - [Dynamic Programming — 2-D](../01_dsa/patterns/14_dp_2d.md), [Tries](../01_dsa/patterns/15_tries.md).
+  - [Dynamic Programming — 2-D](../01_dsa/patterns/16_dp_2d_grid.md), [Tries](../01_dsa/patterns/07_trie.md).
   - Reps: [Unique Paths](https://leetcode.com/problems/unique-paths/) (FREE), [Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/) (FREE), [Edit Distance](https://leetcode.com/problems/edit-distance/) (FREE), [Implement Trie](https://leetcode.com/problems/implement-trie-prefix-tree/) (FREE), [Word Search II](https://leetcode.com/problems/word-search-ii/) (FREE).
 - **Design:**
-  - [Project Design 4 — Production Incident RCA / Tracking Reliability](../02_system_design/project_designs/04_incident_rca.md) — your on-call/RCA leadership story rendered as a reliability/observability design (alerting, dashboards, runbooks, blast-radius). Plus skim [Classic: Rate Limiter](../02_system_design/classic_designs/rate_limiter.md).
+  - [Project Design 4 — Autopay / Recurring-Payment Scheduler](../02_system_design/project_designs/4_autopay_recurring_scheduler.md) — distributed job scheduling, exactly-once execution, mandate management, retries with backoff. Plus skim [Classic: Rate Limiter](../02_system_design/classic_designs/01_rate_limiter.md).
 - **Behavioral:**
   - Full LP dry-run with a friend: 6 LPs, 2 min each, no notes.
 - **Mock:** **🎤 Mock #4 — coding** (DP, the topic most likely to ambush you).
@@ -178,11 +178,11 @@ Every week has **three parallel tracks** plus two milestone columns:
 **Theme: First loops + full-mock intensity. AI-fluency round prep.**
 
 - **Code:**
-  - Spaced-repetition over your weak patterns (DP, advanced graphs, intervals). Daily 2-problem warm-up before any real interview. Re-read [Graphs](../01_dsa/patterns/11_graphs.md) + [DP 1-D](../01_dsa/patterns/13_dp_1d.md).
+  - Spaced-repetition over your weak patterns (DP, advanced graphs, intervals). Daily 2-problem warm-up before any real interview. Re-read [Graphs](../01_dsa/patterns/09_graph_bfs_dfs.md) + [DP 1-D](../01_dsa/patterns/15_dp_1d.md).
 - **Design:**
-  - Rapid review of all 4 project designs + the [SD Framework](../02_system_design/00_framework.md). Be able to whiteboard any of them in 35 min.
+  - Rapid review of all 4 project designs + the [SD Framework](../02_system_design/framework_and_estimation.md). Be able to whiteboard any of them in 35 min.
 - **Behavioral:**
-  - [AI-Fluency / Code-Comprehension](../04_ai_fluency/01_ai_fluency.md) — the 2026 cross-board round. Be fluent discussing LLM-assisted dev, but remember: **do NOT use AI in live coding** (esp. Amazon).
+  - [AI-Fluency / Code-Comprehension](../04_ai_fluency/ai_fluency_drills.md) — the 2026 cross-board round. Be fluent discussing LLM-assisted dev, but remember: **do NOT use AI in live coding** (esp. Amazon).
 - **Mock:** **🎤 Full mock loop #1** — 1 coding + 1 design + 1 behavioral back-to-back, simulating a real onsite day.
 - **Apply:** **🎯 First onsite loops likely begin** (banks + earliest Tier-1). Front-load the banks here as final warm-up reps.
 
@@ -194,9 +194,9 @@ Every week has **three parallel tracks** plus two milestone columns:
 - **Code:**
   - Maintenance only: daily warm-up, review missed problems from live loops same-day while fresh.
 - **Design:**
-  - Targeted prep per company: Confluent → lean on event-driven/Kafka ([Trigger Service](../02_system_design/project_designs/01_trigger_service.md)); Uber → scale/geo; Google → fundamentals depth.
+  - Targeted prep per company: Confluent → lean on event-driven/Kafka ([Trigger Service](../02_system_design/project_designs/2_multitenant_trigger_service.md)); Uber → scale/geo; Google → fundamentals depth.
 - **Behavioral:**
-  - Company-specific: Amazon LPs every round + Bar Raiser; Google Googleyness. Review [Amazon LPs](../03_behavioral/02_amazon_leadership_principles.md) the night before each loop.
+  - Company-specific: Amazon LPs every round + Bar Raiser; Google Googleyness. Review [Amazon LPs](../03_behavioral/amazon_leadership_principles.md) the night before each loop.
 - **Mock:** **🎤 Full mock loop #2** (or live loop debrief if you're mid-cluster).
 - **Apply:** **🎯 Core Tier-1 onsites (Google / Confluent / Uber / Atlassian / Amazon).** Keep them packed tight for offer-timing leverage.
 
@@ -223,7 +223,7 @@ Every week has **three parallel tracks** plus two milestone columns:
 - **Design:** None.
 - **Behavioral:** None.
 - **Mock:** **🎤 Negotiation role-play** — rehearse with a friend playing recruiter.
-- **Apply / Close:** **🎯 MILESTONE — Negotiate.** Use [Negotiation Playbook](../00_strategy/negotiation_playbook.md).
+- **Apply / Close:** **🎯 MILESTONE — Negotiate.** Use [Negotiation Playbook](../05_resources/negotiation_playbook.md).
   - Get **everything in writing**; never give a number first; **stack competing offers** (this is why you clustered the loops).
   - **Floor Rs 70L. Push toward Rs 95L-1.3Cr.** Walk away below floor.
   - **Amazon: confirm the level is L6/SDE III in writing** before deep negotiation — never SDE II.

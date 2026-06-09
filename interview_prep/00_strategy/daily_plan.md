@@ -33,32 +33,32 @@ Rebuild DSA muscle (you are rusty, not weak) while keeping design sharp and seed
 ## Week 1 — Arrays, Hashing, Two Pointers (Jun 8-14)
 
 ### Mon Jun 8 — Arrays & Hashing
-- **Read:** [`../01_dsa/patterns/arrays-hashing.md`](../01_dsa/patterns/arrays-hashing.md)
+- **Read:** [`../01_dsa/patterns/02_hashing_frequency.md`](../01_dsa/patterns/02_hashing_frequency.md)
 - **Solve (3):** [two-sum](https://leetcode.com/problems/two-sum/), [contains-duplicate](https://leetcode.com/problems/contains-duplicate/), [valid-anagram](https://leetcode.com/problems/valid-anagram/)
 - **Micro-task (behavioral):** In [`../03_behavioral/story_bank.md`](../03_behavioral/story_bank.md), draft the headline + situation for your **Trigger Service re-architecture** story (the -60% latency one). One paragraph, STAR skeleton only.
 
 ### Tue Jun 9 — Arrays & Hashing (group/encode)
-- **Read:** [`../01_dsa/patterns/arrays-hashing.md`](../01_dsa/patterns/arrays-hashing.md) (re-skim grouping section)
+- **Read:** [`../01_dsa/patterns/02_hashing_frequency.md`](../01_dsa/patterns/02_hashing_frequency.md) (re-skim grouping section)
 - **Solve (3):** [group-anagrams](https://leetcode.com/problems/group-anagrams/), [top-k-frequent-elements](https://leetcode.com/problems/top-k-frequent-elements/), [product-of-array-except-self](https://leetcode.com/problems/product-of-array-except-self/)
 - **Micro-task (design):** Read the intro of the [System Design Primer](https://github.com/donnemartin/system-design-primer) and jot a 5-line glossary (latency vs throughput, vertical vs horizontal scaling) in [`../02_system_design/notes.md`](../02_system_design/notes.md).
 
 ### Wed Jun 10 — Two Pointers
-- **Read:** [`../01_dsa/patterns/two-pointers.md`](../01_dsa/patterns/two-pointers.md)
+- **Read:** [`../01_dsa/patterns/01_two_pointers_sliding_window.md`](../01_dsa/patterns/01_two_pointers_sliding_window.md)
 - **Solve (3):** [valid-palindrome](https://leetcode.com/problems/valid-palindrome/), [two-sum-ii-input-array-is-sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/), [3sum](https://leetcode.com/problems/3sum/)
 - **Micro-task (behavioral):** Finish the STAR for the Trigger Service story — write the **Action** bullets (what *you* specifically did). Map it to Amazon LPs: *Ownership*, *Dive Deep*.
 
 ### Thu Jun 11 — Two Pointers / Sliding Window bridge
-- **Read:** [`../01_dsa/patterns/two-pointers.md`](../01_dsa/patterns/two-pointers.md) (container/trapping section)
+- **Read:** [`../01_dsa/patterns/01_two_pointers_sliding_window.md`](../01_dsa/patterns/01_two_pointers_sliding_window.md) (container/trapping section)
 - **Solve (2):** [container-with-most-water](https://leetcode.com/problems/container-with-most-water/), [trapping-rain-water](https://leetcode.com/problems/trapping-rain-water/) (hard — timebox 35 min, then read hint)
 - **Micro-task (design):** Watch ~10 min of [ByteByteGo on YouTube](https://www.youtube.com/results?search_query=bytebytego+system+design+basics) on load balancing; one-line note.
 
 ### Fri Jun 12 — Sliding Window
-- **Read:** [`../01_dsa/patterns/sliding-window.md`](../01_dsa/patterns/sliding-window.md)
+- **Read:** [`../01_dsa/patterns/01_two_pointers_sliding_window.md`](../01_dsa/patterns/01_two_pointers_sliding_window.md)
 - **Solve (3):** [best-time-to-buy-and-sell-stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/), [longest-substring-without-repeating-characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/), [longest-repeating-character-replacement](https://leetcode.com/problems/longest-repeating-character-replacement/)
 - **Micro-task (behavioral):** Finish Trigger Service story — write **Result** with hard numbers and the *Learn and Be Curious* angle. This is now a complete, reusable story.
 
 ### Sat Jun 13 — Deep work + Design kickoff (~4-5 hrs)
-- **Read:** [`../01_dsa/patterns/sliding-window.md`](../01_dsa/patterns/sliding-window.md) (hard variants)
+- **Read:** [`../01_dsa/patterns/01_two_pointers_sliding_window.md`](../01_dsa/patterns/01_two_pointers_sliding_window.md) (hard variants)
 - **Solve (3):** [permutation-in-string](https://leetcode.com/problems/permutation-in-string/), [minimum-window-substring](https://leetcode.com/problems/minimum-window-substring/) (hard), [sliding-window-maximum](https://leetcode.com/problems/sliding-window-maximum/) (hard, uses deque)
 - **Design (60-90 min):** Read the [Hello Interview](https://www.hellointerview.com) system-design delivery framework. Write your own 7-step template (requirements -> estimates -> API -> data model -> high-level -> deep dive -> bottlenecks) into [`../02_system_design/framework.md`](../02_system_design/framework.md). This template is your safety net for every design round.
 
@@ -72,32 +72,32 @@ Rebuild DSA muscle (you are rusty, not weak) while keeping design sharp and seed
 ## Week 2 — Stack, Binary Search, Linked List (Jun 15-21)
 
 ### Mon Jun 15 — Stack
-- **Read:** [`../01_dsa/patterns/stack.md`](../01_dsa/patterns/stack.md)
+- **Read:** [`../01_dsa/patterns/04_stack_monotonic.md`](../01_dsa/patterns/04_stack_monotonic.md)
 - **Solve (3):** [valid-parentheses](https://leetcode.com/problems/valid-parentheses/), [min-stack](https://leetcode.com/problems/min-stack/), [evaluate-reverse-polish-notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 - **Micro-task (behavioral):** Draft headline + situation for your **production incident RCA** story (Logward critical tracking services). Map to *Customer Obsession*, *Bias for Action*.
 
 ### Tue Jun 16 — Stack (monotonic)
-- **Read:** [`../01_dsa/patterns/stack.md`](../01_dsa/patterns/stack.md) (monotonic stack section)
+- **Read:** [`../01_dsa/patterns/04_stack_monotonic.md`](../01_dsa/patterns/04_stack_monotonic.md) (monotonic stack section)
 - **Solve (3):** [daily-temperatures](https://leetcode.com/problems/daily-temperatures/), [car-fleet](https://leetcode.com/problems/car-fleet/), [largest-rectangle-in-histogram](https://leetcode.com/problems/largest-rectangle-in-histogram/) (hard — timebox 35 min)
 - **Micro-task (design):** Note in [`../02_system_design/notes.md`](../02_system_design/notes.md): caching strategies (write-through vs write-back, eviction). Tie to your real Redis usage at Logward.
 
 ### Wed Jun 17 — Binary Search
-- **Read:** [`../01_dsa/patterns/binary-search.md`](../01_dsa/patterns/binary-search.md)
+- **Read:** [`../01_dsa/patterns/03_binary_search.md`](../01_dsa/patterns/03_binary_search.md)
 - **Solve (3):** [binary-search](https://leetcode.com/problems/binary-search/), [search-a-2d-matrix](https://leetcode.com/problems/search-a-2d-matrix/), [koko-eating-bananas](https://leetcode.com/problems/koko-eating-bananas/)
 - **Micro-task (behavioral):** Finish RCA story Action + Result. Practice saying it out loud once, under 2 minutes.
 
 ### Thu Jun 18 — Binary Search (on rotated / answer space)
-- **Read:** [`../01_dsa/patterns/binary-search.md`](../01_dsa/patterns/binary-search.md) (rotated array section)
+- **Read:** [`../01_dsa/patterns/03_binary_search.md`](../01_dsa/patterns/03_binary_search.md) (rotated array section)
 - **Solve (3):** [find-minimum-in-rotated-sorted-array](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/), [search-in-rotated-sorted-array](https://leetcode.com/problems/search-in-rotated-sorted-array/), [median-of-two-sorted-arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) (hard — read pattern first)
 - **Micro-task (design):** 10 min of [Hussein Nasser on YouTube](https://www.youtube.com/results?search_query=hussein+nasser+database+indexing) on DB indexing; one-line note.
 
 ### Fri Jun 19 — Linked List
-- **Read:** [`../01_dsa/patterns/linked-list.md`](../01_dsa/patterns/linked-list.md)
+- **Read:** [`../01_dsa/patterns/05_linked_list.md`](../01_dsa/patterns/05_linked_list.md)
 - **Solve (3):** [reverse-linked-list](https://leetcode.com/problems/reverse-linked-list/), [merge-two-sorted-lists](https://leetcode.com/problems/merge-two-sorted-lists/), [linked-list-cycle](https://leetcode.com/problems/linked-list-cycle/)
 - **Micro-task (behavioral):** Draft your **"tell me about yourself"** 90-second pitch in [`../03_behavioral/story_bank.md`](../03_behavioral/story_bank.md). Lead with Logward distributed-systems ownership.
 
 ### Sat Jun 20 — Deep work + Design (~4-5 hrs)  | **DOC DRILL**
-- **Read:** [`../01_dsa/patterns/linked-list.md`](../01_dsa/patterns/linked-list.md) (advanced section)
+- **Read:** [`../01_dsa/patterns/05_linked_list.md`](../01_dsa/patterns/05_linked_list.md) (advanced section)
 - **Solve (3, in a plain Google Doc — no IDE, no run):** [reorder-list](https://leetcode.com/problems/reorder-list/), [remove-nth-node-from-end-of-list](https://leetcode.com/problems/remove-nth-node-from-end-of-list/), [lru-cache](https://leetcode.com/problems/lru-cache/)
 - **Design (60-90 min):** Design a **URL shortener / TinyURL** using your framework. Free ref: [System Design Primer](https://github.com/donnemartin/system-design-primer). Write the full pass into [`../02_system_design/practiced/url-shortener.md`](../02_system_design/practiced/url-shortener.md).
 
@@ -111,32 +111,32 @@ Rebuild DSA muscle (you are rusty, not weak) while keeping design sharp and seed
 ## Week 3 — Trees, Tries, Heaps (Jun 22-28)
 
 ### Mon Jun 22 — Binary Trees (traversal)
-- **Read:** [`../01_dsa/patterns/trees.md`](../01_dsa/patterns/trees.md)
+- **Read:** [`../01_dsa/patterns/06_trees_bst.md`](../01_dsa/patterns/06_trees_bst.md)
 - **Solve (3):** [invert-binary-tree](https://leetcode.com/problems/invert-binary-tree/), [maximum-depth-of-binary-tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/), [diameter-of-binary-tree](https://leetcode.com/problems/diameter-of-binary-tree/)
 - **Micro-task (behavioral):** Draft **conflict / disagreement** story (e.g. pushing back on a design at 56 AI or Logward). Map to *Have Backbone; Disagree and Commit*.
 
 ### Tue Jun 23 — Binary Trees (BFS / BST)
-- **Read:** [`../01_dsa/patterns/trees.md`](../01_dsa/patterns/trees.md) (level-order + BST section)
+- **Read:** [`../01_dsa/patterns/06_trees_bst.md`](../01_dsa/patterns/06_trees_bst.md) (level-order + BST section)
 - **Solve (3):** [binary-tree-level-order-traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/), [validate-binary-search-tree](https://leetcode.com/problems/validate-binary-search-tree/), [kth-smallest-element-in-a-bst](https://leetcode.com/problems/kth-smallest-element-in-a-bst/)
 - **Micro-task (design):** Note: SQL vs NoSQL decision criteria. Tie to your PostgreSQL + MongoDB real usage.
 
 ### Wed Jun 24 — Trees (construct / LCA)
-- **Read:** [`../01_dsa/patterns/trees.md`](../01_dsa/patterns/trees.md) (recursion-with-return-value section)
+- **Read:** [`../01_dsa/patterns/06_trees_bst.md`](../01_dsa/patterns/06_trees_bst.md) (recursion-with-return-value section)
 - **Solve (3):** [lowest-common-ancestor-of-a-binary-search-tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/), [construct-binary-tree-from-preorder-and-inorder-traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/), [binary-tree-maximum-path-sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) (hard)
 - **Micro-task (behavioral):** Finish conflict story Action + Result. Say it out loud once.
 
 ### Thu Jun 25 — Tries
-- **Read:** [`../01_dsa/patterns/tries.md`](../01_dsa/patterns/tries.md)
+- **Read:** [`../01_dsa/patterns/07_trie.md`](../01_dsa/patterns/07_trie.md)
 - **Solve (3):** [implement-trie-prefix-tree](https://leetcode.com/problems/implement-trie-prefix-tree/), [design-add-and-search-words-data-structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/), [word-search-ii](https://leetcode.com/problems/word-search-ii/) (hard — trie + backtracking)
 - **Micro-task (design):** 10 min of [ByteByteGo on YouTube](https://www.youtube.com/results?search_query=bytebytego+message+queue+kafka) on message queues. This is your Confluent home turf — note one Kafka-specific insight.
 
 ### Fri Jun 26 — Heaps / Priority Queue
-- **Read:** [`../01_dsa/patterns/heap.md`](../01_dsa/patterns/heap.md)
+- **Read:** [`../01_dsa/patterns/08_heap_topk_mergek.md`](../01_dsa/patterns/08_heap_topk_mergek.md)
 - **Solve (3):** [kth-largest-element-in-a-stream](https://leetcode.com/problems/kth-largest-element-in-a-stream/), [last-stone-weight](https://leetcode.com/problems/last-stone-weight/), [k-closest-points-to-origin](https://leetcode.com/problems/k-closest-points-to-origin/)
 - **Micro-task (behavioral):** Draft **"biggest failure / mistake"** story. Map to *Earn Trust*, *Learn and Be Curious*. Be honest; show the lesson.
 
 ### Sat Jun 27 — Deep work + Design (~4-5 hrs)
-- **Read:** [`../01_dsa/patterns/heap.md`](../01_dsa/patterns/heap.md) (two-heaps + merge section)
+- **Read:** [`../01_dsa/patterns/08_heap_topk_mergek.md`](../01_dsa/patterns/08_heap_topk_mergek.md) (two-heaps + merge section)
 - **Solve (3):** [task-scheduler](https://leetcode.com/problems/task-scheduler/), [merge-k-sorted-lists](https://leetcode.com/problems/merge-k-sorted-lists/) (hard), [find-median-from-data-stream](https://leetcode.com/problems/find-median-from-data-stream/) (hard, two heaps)
 - **Design (60-90 min):** Design a **distributed message queue / Kafka-like system**. This is your strongest, most strategic design (Confluent). Free refs: [Confluent/Kafka docs blog](https://www.confluent.io/blog/) + [ByteByteGo YouTube](https://www.youtube.com/results?search_query=bytebytego+design+kafka). Write into [`../02_system_design/practiced/distributed-queue.md`](../02_system_design/practiced/distributed-queue.md).
 
@@ -150,27 +150,27 @@ Rebuild DSA muscle (you are rusty, not weak) while keeping design sharp and seed
 ## Week 4 — Backtracking, Graphs, + Phase-1 consolidation (Jun 29 - Jul 5)
 
 ### Mon Jun 29 — Backtracking
-- **Read:** [`../01_dsa/patterns/backtracking.md`](../01_dsa/patterns/backtracking.md)
+- **Read:** [`../01_dsa/patterns/13_backtracking.md`](../01_dsa/patterns/13_backtracking.md)
 - **Solve (3):** [subsets](https://leetcode.com/problems/subsets/), [combination-sum](https://leetcode.com/problems/combination-sum/), [permutations](https://leetcode.com/problems/permutations/)
 - **Micro-task (behavioral):** Draft **"delivered under tight deadline / ambiguity"** story (Razorpay Payment Link or Autopay at 56 AI). Map to *Deliver Results*, *Invent and Simplify*.
 
 ### Tue Jun 30 — Backtracking (grid / pruning)
-- **Read:** [`../01_dsa/patterns/backtracking.md`](../01_dsa/patterns/backtracking.md) (pruning section)
+- **Read:** [`../01_dsa/patterns/13_backtracking.md`](../01_dsa/patterns/13_backtracking.md) (pruning section)
 - **Solve (3):** [word-search](https://leetcode.com/problems/word-search/), [palindrome-partitioning](https://leetcode.com/problems/palindrome-partitioning/), [combination-sum-ii](https://leetcode.com/problems/combination-sum-ii/)
 - **Micro-task (design):** Note: idempotency + exactly-once vs at-least-once delivery. You lived this at Logward (data consistency layer) and 56 AI (payments) — write 4 lines you can speak to.
 
 ### Wed Jul 1 — Graphs (BFS/DFS)
-- **Read:** [`../01_dsa/patterns/graphs.md`](../01_dsa/patterns/graphs.md)
+- **Read:** [`../01_dsa/patterns/09_graph_bfs_dfs.md`](../01_dsa/patterns/09_graph_bfs_dfs.md)
 - **Solve (3):** [number-of-islands](https://leetcode.com/problems/number-of-islands/), [clone-graph](https://leetcode.com/problems/clone-graph/), [pacific-atlantic-water-flow](https://leetcode.com/problems/pacific-atlantic-water-flow/)
 - **Micro-task (behavioral):** Finish deadline story. Say it out loud once.
 
 ### Thu Jul 2 — Graphs (topological sort)
-- **Read:** [`../01_dsa/patterns/graphs.md`](../01_dsa/patterns/graphs.md) (topo-sort + cycle detection)
+- **Read:** [`../01_dsa/patterns/09_graph_bfs_dfs.md`](../01_dsa/patterns/09_graph_bfs_dfs.md) (topo-sort + cycle detection)
 - **Solve (3):** [course-schedule](https://leetcode.com/problems/course-schedule/), [course-schedule-ii](https://leetcode.com/problems/course-schedule-ii/), [graph-valid-tree](https://leetcode.com/problems/graph-valid-tree/) (LeetCode Premium — free alt: [LintCode 178](https://www.lintcode.com/problem/178/) or [NeetCode graph-valid-tree](https://neetcode.io/problems/valid-tree))
 - **Micro-task (design):** 10 min of [Gaurav Sen on YouTube](https://www.youtube.com/results?search_query=gaurav+sen+consistent+hashing) on consistent hashing; one-line note.
 
 ### Fri Jul 3 — Graphs (Dijkstra / union-find) | **DOC DRILL**
-- **Read:** [`../01_dsa/patterns/graphs.md`](../01_dsa/patterns/graphs.md) (weighted + union-find)
+- **Read:** [`../01_dsa/patterns/09_graph_bfs_dfs.md`](../01_dsa/patterns/09_graph_bfs_dfs.md) (weighted + union-find)
 - **Solve (3, in a plain doc — no IDE):** [network-delay-time](https://leetcode.com/problems/network-delay-time/), [number-of-connected-components-in-an-undirected-graph](https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/) (Premium — free alt: [NeetCode](https://neetcode.io/problems/count-connected-components)), [redundant-connection](https://leetcode.com/problems/redundant-connection/)
 - **Micro-task (behavioral):** Draft **"mentored / influenced without authority"** story (you led incident RCA, introduced unit testing). Map to *Hire and Develop the Best*.
 
@@ -224,4 +224,4 @@ A realistic full-time-job week = **6 sessions**:
 
 ## Quick reference — pattern files
 
-All in [`../01_dsa/patterns/`](../01_dsa/patterns/): `arrays-hashing.md`, `two-pointers.md`, `sliding-window.md`, `stack.md`, `binary-search.md`, `linked-list.md`, `trees.md`, `tries.md`, `heap.md`, `backtracking.md`, `graphs.md`, `dynamic-programming.md` (DP gets its own dedicated rotation in the Weeks 5-12 weak-spot slots — you already have a head start from your `DP/` practice folder).
+All in [`../01_dsa/patterns/`](../01_dsa/patterns/): `arrays-hashing.md`, `two-pointers.md`, `sliding-window.md`, `stack.md`, `binary-search.md`, `linked-list.md`, `trees.md`, `tries.md`, `heap.md`, `backtracking.md`, `graphs.md`, `dynamic-programming.md` (DP gets its own dedicated rotation in the Weeks 5-12 weak-spot slots — you already have a head start from patterns 15-17 (DP / knapsack)).

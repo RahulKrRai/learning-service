@@ -59,6 +59,18 @@
 | [18_greedy.md](./01_dsa/patterns/18_greedy.md) | Greedy | Kadane's, Jump Game II, Gas Station |
 | [19_bit_manipulation.md](./01_dsa/patterns/19_bit_manipulation.md) | Bit Manipulation | Single Number, Missing Number, Sum Without + |
 
+#### Advanced add-ons (20–26) — study after the core 19, prioritised by target company
+
+| File | Pattern | Frequency / who |
+|------|---------|-----------------|
+| [20_matrix_grid.md](./01_dsa/patterns/20_matrix_grid.md) | Matrix & grid manipulation | 🔥 everyone (Google/Amazon) |
+| [21_math_geometry.md](./01_dsa/patterns/21_math_geometry.md) | Math, number theory & randomized | 🔥 Google + bank OAs |
+| [22_object_oriented_design.md](./01_dsa/patterns/22_object_oriented_design.md) | OOD / low-level design (coding) | 🔥 **Atlassian**, Amazon, Uber |
+| [23_advanced_dp.md](./01_dsa/patterns/23_advanced_dp.md) | Advanced DP (state-machine/interval/bitmask/tree) | ⚡ Google-hard |
+| [24_advanced_strings.md](./01_dsa/patterns/24_advanced_strings.md) | Advanced strings (KMP / Rabin-Karp) | ⚡ Google-hard |
+| [25_range_queries.md](./01_dsa/patterns/25_range_queries.md) | Prefix/diff arrays, Fenwick & segment tree | 🔸 core + Google/Uber-hard |
+| [26_divide_conquer_sorting.md](./01_dsa/patterns/26_divide_conquer_sorting.md) | Divide & conquer, sorting, quickselect | 🔸 everyone |
+
 ---
 
 ### 02 — System Design
@@ -68,6 +80,7 @@
 | [README.md](./02_system_design/README.md) | SD hub: framework, design groups, your edge |
 | [framework_and_estimation.md](./02_system_design/framework_and_estimation.md) | 8-step interview framework, latency table, estimation formulas, design checklist |
 | [fundamentals.md](./02_system_design/fundamentals.md) | Building blocks: caching, Kafka deep-dive, sharding, CAP, outbox pattern, rate limiting |
+| [low_level_design.md](./02_system_design/low_level_design.md) | **LLD / object modeling** — 5-step framework, design patterns, 5 worked designs (parking lot, elevator, Splitwise, vending machine, movie booking). 🔥 Atlassian + banks |
 
 #### Your 4 Home Designs (memorize these cold)
 

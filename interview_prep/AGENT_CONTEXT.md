@@ -7,7 +7,7 @@
 
 A complete, self-contained interview preparation system for **Rahul Kumar Rai** targeting a move from Logward (54 LPA, Senior Backend Engineer) to a senior big-tech / top-product role at Rs 95L-1.3Cr by ~September 2026. Built June 2026.
 
-**50 markdown files across 6 sections. The folder is now COMPLETE.**
+**63 markdown files across 6 sections. The folder is COMPLETE and link-audited — all internal links resolve. DSA = 19 core patterns + 7 advanced add-ons (20–26).**
 
 ---
 
@@ -52,7 +52,7 @@ interview_prep/
 │   ├── company_playbooks.md          ← Per-company interview structure + tips
 │   └── application_tracker.md        ← Tracking table, referral drafts
 │
-├── 01_dsa/                           ← 21 files, COMPLETE
+├── 01_dsa/                           ← 28 files, COMPLETE (19 core patterns + 7 advanced add-ons 20–26: matrix, math, OOD/LLD, advanced DP, strings, range queries, D&C)
 │   ├── README.md                     ← DSA hub, 19-pattern checklist, frameworks
 │   ├── templates.md                  ← ~20 Python 3 templates (copy-pasteable)
 │   └── patterns/                     ← 19 pattern files (01 through 19)
@@ -76,10 +76,11 @@ interview_prep/
 │       ├── 18_greedy.md
 │       └── 19_bit_manipulation.md
 │
-├── 02_system_design/                 ← 15 files, COMPLETE
+├── 02_system_design/                 ← 16 files, COMPLETE
 │   ├── README.md                     ← SD hub, framework overview
 │   ├── framework_and_estimation.md   ← 8-step framework, latency table, formulas, checklist
 │   ├── fundamentals.md               ← Building blocks (caching, Kafka deep, sharding, CAP, etc.)
+│   ├── low_level_design.md           ← LLD / object modeling: 5-step framework, design patterns, 5 worked designs (parking lot, elevator, Splitwise, vending machine, movie booking). For data-structure LLD see 01_dsa/patterns/22.
 │   ├── project_designs/              ← Rahul's 4 home designs (biggest edge)
 │   │   ├── 1_container_tracking_platform.md
 │   │   ├── 2_multitenant_trigger_service.md
@@ -112,13 +113,15 @@ interview_prep/
 
 ---
 
-## Known Issues / Inconsistencies to Fix (if agent picks up)
+## Resolved Issues (fixed 2026-06-08)
 
-1. **12_week_plan.md uses old file references:** It links to `../01_dsa/patterns/01_arrays_hashing.md`, `02_two_pointers.md`, `03_sliding_window.md`, etc. — these paths don't exist. The actual files are named `01_two_pointers_sliding_window.md`, `02_hashing_frequency.md`, etc. A future agent should update the links in `12_week_plan.md` (and `daily_plan.md` if it has the same issue) to match the actual file names.
+> All known inconsistencies have been fixed and the whole folder was link-audited — every internal markdown link resolves (187 checked, 0 broken).
 
-2. **daily_plan.md links may have the same stale pattern references** — verify and fix to match actual `patterns/` filenames.
+1. ✅ **FIXED — 12_week_plan.md stale links:** all pattern / design / behavioral / resource links re-pointed to the real filenames. The 3 mislabeled "project designs" (validation layer / lifecycle orchestration / incident RCA) were relabeled to the 4 real home designs (container tracking, trigger service, payment links, autopay), one per Phase-2 week.
 
-3. **Verify:** DSA pattern files 01-19 all exist and have content (confirmed: 370+ lines in pattern 01). No empty files found.
+2. ✅ **FIXED — daily_plan.md pattern links** re-pointed to real filenames. Its "write into" targets (`../02_system_design/notes.md`, `framework.md`, `practiced/*`) were **intentional self-authoring workspace files** — a workspace scaffold was created so they resolve and give Rahul a place to write: `02_system_design/notes.md`, `02_system_design/framework.md`, and `02_system_design/practiced/` (README + url-shortener / distributed-queue / rate-limiter stubs, each linking to its reference solution to diff against).
+
+3. ✅ **VERIFIED:** all 19 DSA pattern files exist with content; every Python code block was run/verified during the build; no empty or stub files.
 
 ---
 

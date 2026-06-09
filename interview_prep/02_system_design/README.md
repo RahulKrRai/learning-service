@@ -17,6 +17,7 @@
 
 See [framework_and_estimation.md](./framework_and_estimation.md) for the full framework + estimation cheat sheet.
 See [fundamentals.md](./fundamentals.md) for building-block references (caching, Kafka, sharding, etc.).
+See [low_level_design.md](./low_level_design.md) for **object-modeling / LLD** (parking lot, elevator, Splitwise, vending machine, movie booking) — the distinct round Atlassian and bank VP loops lean on. For data-structure LLD (LRU/LFU/iterators) see [../01_dsa/patterns/22_object_oriented_design.md](../01_dsa/patterns/22_object_oriented_design.md).
 
 ---
 

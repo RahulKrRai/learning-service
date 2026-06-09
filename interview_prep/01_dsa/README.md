@@ -12,19 +12,19 @@ Your home base for the coding-interview prep. DSA is **rusty, not weak** — so 
 └── patterns/
     ├── 01_two_pointers_sliding_window.md
     ├── 02_hashing_frequency.md
-    ├── 03_binary_search.md
     ├── ...
-    └── 19_bit_manipulation.md
+    ├── 19_bit_manipulation.md       ← end of the CORE 19
+    └── 20–26 (advanced add-ons)     ← matrix · math · OOD/LLD · advanced DP · strings · range queries · D&C
 ```
 
-- **One file per pattern**, 19 total, under `patterns/`.
-- **Naming:** `NN_<snake_case_name>.md` where `NN` is a zero-padded two-digit index (`01`–`19`). The index is just a stable ordering for the table below — it is *not* a difficulty or study order.
+- **One file per pattern: 19 core + 7 advanced = 26 total**, under `patterns/`.
+- **Naming:** `NN_<snake_case_name>.md` where `NN` is a zero-padded two-digit index (`01`–`26`). The index is just a stable ordering for the tables below — it is *not* a difficulty or study order. **01–19 are the core spine**; **20–26 are advanced / company-specific add-ons** (see the second table).
 - Each pattern file follows the same internal shape: *when to reach for it → the core template (Python) → 6–10 representative problems (easy→hard, with company tags) → the 2–3 "gotcha" variants interviewers use to see if you actually understand it → recall drill.*
 - Keep solutions in your own words. A pattern file is "done" when you can reproduce the template from a blank page in under 3 minutes.
 
 ---
 
-## The 19-pattern checklist
+## The core pattern checklist (01–19)
 
 Update the **Confidence** column honestly as you go. The goal is to turn everything 🟢 by the time onsites cluster (late July / August).
 
@@ -54,7 +54,23 @@ Update the **Confidence** column honestly as you go. The goal is to turn everyth
 | 18 | Greedy | 🔴 | [patterns/18_greedy.md](patterns/18_greedy.md) |
 | 19 | Bit manipulation | 🔴 | [patterns/19_bit_manipulation.md](patterns/19_bit_manipulation.md) |
 
-> Knapsack starts at 🟡 because you've already got `DP/` implementations checked in (0/1 knapsack, unbounded, subset). Lean on that — re-derive it once, then promote to 🟢.
+> Knapsack starts at 🟡 because you've already worked 0/1-knapsack, unbounded, and subset variants. Lean on that — re-derive it once, then promote to 🟢.
+
+### Advanced / company-specific add-ons (20–26)
+
+These cover the ~15% the core 19 don't fully reach. Study them **after** the core spine is mostly 🟡/🟢, and prioritise by your target loops (frequency tags below).
+
+| # | Pattern | Frequency / who asks | Confidence | File |
+|---|---------|----------------------|:----------:|------|
+| 20 | Matrix & grid manipulation | 🔥 High — everyone (esp. Google/Amazon) | 🔴 | [patterns/20_matrix_grid.md](patterns/20_matrix_grid.md) |
+| 21 | Math, number theory & randomized | 🔥 High — Google + bank OAs (GS/JPM) | 🔴 | [patterns/21_math_geometry.md](patterns/21_math_geometry.md) |
+| 22 | Object-oriented / low-level design (coding) | 🔥 High — **Atlassian**, Amazon, Uber | 🔴 | [patterns/22_object_oriented_design.md](patterns/22_object_oriented_design.md) |
+| 23 | Advanced DP (state-machine / interval / bitmask / tree) | ⚡ Google-hard | 🔴 | [patterns/23_advanced_dp.md](patterns/23_advanced_dp.md) |
+| 24 | Advanced strings (KMP / Rabin-Karp) | ⚡ Google-hard, lower freq | 🔴 | [patterns/24_advanced_strings.md](patterns/24_advanced_strings.md) |
+| 25 | Prefix/difference arrays & range queries (Fenwick / segment tree) | 🔸 Medium core + Google/Uber-hard | 🔴 | [patterns/25_range_queries.md](patterns/25_range_queries.md) |
+| 26 | Divide & conquer, sorting & quickselect | 🔸 Medium-high — everyone | 🔴 | [patterns/26_divide_conquer_sorting.md](patterns/26_divide_conquer_sorting.md) |
+
+**Where to spend first, by target:** **Atlassian** → 22 (OOD) is non-negotiable. **Google L5** → 20, 21, 23. **Banks (GS/JPM OA)** → 21, 26. **Amazon / Uber** → 20, 22, 26. Confluent leans more on systems/concurrency than exotic algorithms, so the core 19 + 22 + 26 cover it.
 
 ---
 
@@ -62,7 +78,7 @@ Update the **Confidence** column honestly as you go. The goal is to turn everyth
 
 - **Aim for ~150–200 solved**, not 500. A solved problem you can't reproduce a week later is worth zero.
 - **Bias toward company-tagged MEDIUMs.** Easies are warm-ups (do a handful per pattern to recover the template); the interview signal lives in mediums. Hards only where a target company is known to ask them (Google, Uber).
-- **Per pattern:** roughly 1–2 easy, 5–8 medium, 1–2 hard. That lands you around 8–10 problems × 19 patterns ≈ 160.
+- **Per pattern:** roughly 1–2 easy, 5–8 medium, 1–2 hard. That lands you around 8–10 problems × 19 core patterns ≈ 160 (plus a lighter, prioritised pass over the 20–26 add-ons).
 - **The recall rule:** a problem only counts when you can, on a blank editor, re-derive the approach and code it cleanly **without looking**. Re-solve anything you needed a hint on after 3–4 days (spaced repetition). Track this in each pattern file's recall drill.
 - **Use company tags** (LeetCode → problem → "Companies", free for the target list) to pull the actual asked-mediums for Google / Amazon / Uber / Confluent / Atlassian / Goldman / JPMorgan and prioritise those.
 
