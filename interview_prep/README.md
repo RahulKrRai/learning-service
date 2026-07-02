@@ -25,6 +25,7 @@
 | [daily_plan.md](./00_strategy/daily_plan.md) | Day-by-day schedule for Phase 1; weekly rhythm template for Phases 2-3 |
 | [company_playbooks.md](./00_strategy/company_playbooks.md) | Per-company interview structure, tips, and what good looks like at your target level |
 | [application_tracker.md](./00_strategy/application_tracker.md) | Tracking table, referral outreach drafts, loop retro template |
+| [practice_log.md](./00_strategy/practice_log.md) | **Practice tracker** — DSA problem log, spaced-repetition schedule, pattern heatmap, mistakes log, weekly scoreboard. Fixes "I feel lost". |
 
 ---
 
@@ -70,6 +71,7 @@
 | [24_advanced_strings.md](./01_dsa/patterns/24_advanced_strings.md) | Advanced strings (KMP / Rabin-Karp) | ⚡ Google-hard |
 | [25_range_queries.md](./01_dsa/patterns/25_range_queries.md) | Prefix/diff arrays, Fenwick & segment tree | 🔸 core + Google/Uber-hard |
 | [26_divide_conquer_sorting.md](./01_dsa/patterns/26_divide_conquer_sorting.md) | Divide & conquer, sorting, quickselect | 🔸 everyone |
+| [27_concurrency_multithreading.md](./01_dsa/patterns/27_concurrency_multithreading.md) | Concurrency & multithreading (locks, conditions, semaphores, deadlock) | 🔥 **Uber, Atlassian**, Google/Amazon |
 
 ---
 
@@ -81,6 +83,9 @@
 | [framework_and_estimation.md](./02_system_design/framework_and_estimation.md) | 8-step interview framework, latency table, estimation formulas, design checklist |
 | [fundamentals.md](./02_system_design/fundamentals.md) | Building blocks: caching, Kafka deep-dive, sharding, CAP, outbox pattern, rate limiting |
 | [low_level_design.md](./02_system_design/low_level_design.md) | **LLD / object modeling** — 5-step framework, design patterns, 5 worked designs (parking lot, elevator, Splitwise, vending machine, movie booking). 🔥 Atlassian + banks |
+| [machine_coding_round.md](./02_system_design/machine_coding_round.md) | **Machine coding round** — timed build-working-code round: rubric, 6-step approach, worked pluggable-cache example, 7 drills. 🔥 **Atlassian**, Uber |
+| [project_deep_dive_qa.md](./02_system_design/project_deep_dive_qa.md) | **Project deep-dive** — defend your real decisions: probing Q&A for all 4 home projects, universal drill questions. 🔥 all senior loops |
+| [engineering_hygiene.md](./02_system_design/engineering_hygiene.md) | **Operational maturity** — 12-factor app, deploy/release patterns (canary, blue-green, expand/contract migrations), observability (RED/USE), SLI/SLO/error budgets, resilience patterns, production-readiness checklist |
 
 #### Your 4 Home Designs (memorize these cold)
 
@@ -103,6 +108,24 @@
 | [06_distributed_message_log_kafka.md](./02_system_design/classic_designs/06_distributed_message_log_kafka.md) | Distributed Message Log (Kafka) | **Confluent interview** — go deep |
 | [07_ride_dispatch_matching.md](./02_system_design/classic_designs/07_ride_dispatch_matching.md) | Ride Dispatch / Matching | **Uber interview** — geohash/S2, driver location |
 | [08_distributed_job_scheduler.md](./02_system_design/classic_designs/08_distributed_job_scheduler.md) | Distributed Job Scheduler | Exactly-once, claim expiry, leader election |
+
+#### 13 Grokking Designs (added to push breadth to 95%+)
+
+| File | System | Key depth |
+|------|--------|-----------|
+| [09_chat_messaging_whatsapp.md](./02_system_design/classic_designs/09_chat_messaging_whatsapp.md) | Chat (WhatsApp/Messenger) | WebSocket conn mgmt, delivery/read receipts, wide-column store |
+| [10_twitter_timeline.md](./02_system_design/classic_designs/10_twitter_timeline.md) | Twitter (timeline + tweet) | Hybrid fan-out, tweet object model, celebrity merge |
+| [11_video_streaming_youtube.md](./02_system_design/classic_designs/11_video_streaming_youtube.md) | Video Streaming (YouTube/Netflix) | Transcoding pipeline, CDN, adaptive bitrate |
+| [12_photo_sharing_instagram.md](./02_system_design/classic_designs/12_photo_sharing_instagram.md) | Instagram | Media upload pipeline, CDN, sharded counters |
+| [13_file_storage_dropbox.md](./02_system_design/classic_designs/13_file_storage_dropbox.md) | File Storage (Dropbox/Drive) | Chunking + dedup, delta sync, conflict resolution |
+| [14_web_crawler.md](./02_system_design/classic_designs/14_web_crawler.md) | Web Crawler | URL frontier + politeness, bloom-filter dedup |
+| [15_proximity_service_yelp.md](./02_system_design/classic_designs/15_proximity_service_yelp.md) | Proximity / Yelp / Nearby | Geohash vs quadtree vs S2, read-heavy search |
+| [16_notification_system.md](./02_system_design/classic_designs/16_notification_system.md) | Notification System | Multi-channel fan-out, retries/DLQ, rate limits |
+| [17_ticketmaster_booking.md](./02_system_design/classic_designs/17_ticketmaster_booking.md) | Ticketmaster / Booking | Seat-hold concurrency, no double-booking, idempotent pay |
+| [18_unique_id_generator.md](./02_system_design/classic_designs/18_unique_id_generator.md) | Unique ID Generator | Snowflake bit layout, clock skew, range allocation |
+| [19_collaborative_editor_google_docs.md](./02_system_design/classic_designs/19_collaborative_editor_google_docs.md) | Collaborative Editor (Docs/Confluence) | OT vs CRDT, real-time sync, op log |
+| [20_blob_store_s3.md](./02_system_design/classic_designs/20_blob_store_s3.md) | Blob Store (S3) | Metadata/data split, erasure coding, multipart upload |
+| [21_distributed_search.md](./02_system_design/classic_designs/21_distributed_search.md) | Distributed Search | Inverted index, near-real-time indexing, scatter-gather |
 
 ---
 

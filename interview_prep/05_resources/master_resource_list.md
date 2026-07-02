@@ -45,11 +45,48 @@
 | Stripe Engineering Blog | https://stripe.com/blog/engineering | Payments, idempotency, reliability |
 | Martin Fowler's Blog | https://martinfowler.com | Architecture patterns, microservices, event sourcing |
 
+### 🆓 Free Grokking-Equivalent Curriculum
+
+> You don't need to buy Grokking. Between your own files + the four pillars below, you have a complete, legal, no-cost curriculum covering 100% of the Grokking question bank. Use the paid course (listed under "Paid") only as an optional cross-check.
+
+**The four pillars (cover ~everything — start here):**
+1. **Your own designs** — [../02_system_design/classic_designs/](../02_system_design/classic_designs/) files 01–21 + your 4 home designs. This *is* the Grokking bank, written out. Primary resource.
+2. **System Design Primer** — https://github.com/donnemartin/system-design-primer — free, MIT-licensed; the building-blocks + several full designs.
+3. **Hello Interview** — https://www.hellointerview.com/learn/system-design — free written walkthroughs by ex-Meta/Amazon staff; as good as Grokking, arguably better for interview framing.
+4. **ByteByteGo YouTube** — https://www.youtube.com/@ByteByteGo — Alex Xu's free animated breakdowns of most designs.
+
+**Per-design map — best free VIDEO + best free WRITTEN walkthrough** (YouTube entries are search links so they survive video re-uploads):
+
+| Grokking design | Your file | Free VIDEO | Free WRITTEN walkthrough |
+|-----------------|-----------|------------|--------------------------|
+| Chat / Messenger | [09](../02_system_design/classic_designs/09_chat_messaging_whatsapp.md) | https://www.youtube.com/results?search_query=gaurav+sen+design+whatsapp | https://www.hellointerview.com/learn/system-design/problem-breakdowns/whatsapp |
+| Twitter | [10](../02_system_design/classic_designs/10_twitter_timeline.md) | https://www.youtube.com/results?search_query=bytebytego+design+twitter | https://www.hellointerview.com/learn/system-design/problem-breakdowns/tweet |
+| YouTube / Netflix | [11](../02_system_design/classic_designs/11_video_streaming_youtube.md) | https://www.youtube.com/results?search_query=bytebytego+design+youtube | https://netflixtechblog.com (Netflix Tech Blog — encoding/CDN posts) |
+| Instagram | [12](../02_system_design/classic_designs/12_photo_sharing_instagram.md) | https://www.youtube.com/results?search_query=bytebytego+design+instagram | https://github.com/donnemartin/system-design-primer |
+| Dropbox / Drive | [13](../02_system_design/classic_designs/13_file_storage_dropbox.md) | https://www.youtube.com/results?search_query=bytebytego+design+google+drive | https://www.hellointerview.com/learn/system-design/problem-breakdowns/dropbox |
+| Web Crawler | [14](../02_system_design/classic_designs/14_web_crawler.md) | https://www.youtube.com/results?search_query=gaurav+sen+web+crawler+system+design | https://github.com/donnemartin/system-design-primer |
+| Proximity / Yelp | [15](../02_system_design/classic_designs/15_proximity_service_yelp.md) | https://www.youtube.com/results?search_query=bytebytego+proximity+service | https://www.uber.com/en-US/blog/engineering/ (geo / H3 posts) |
+| Notification system | [16](../02_system_design/classic_designs/16_notification_system.md) | https://www.youtube.com/results?search_query=bytebytego+notification+system | https://github.com/donnemartin/system-design-primer |
+| Ticketmaster / booking | [17](../02_system_design/classic_designs/17_ticketmaster_booking.md) | https://www.youtube.com/results?search_query=hello+interview+ticketmaster+system+design | https://www.hellointerview.com/learn/system-design/problem-breakdowns/ticketmaster |
+| Unique ID generator | [18](../02_system_design/classic_designs/18_unique_id_generator.md) | https://www.youtube.com/results?search_query=bytebytego+unique+id+generator+snowflake | https://github.com/donnemartin/system-design-primer |
+| Google Docs / collab | [19](../02_system_design/classic_designs/19_collaborative_editor_google_docs.md) | https://www.youtube.com/results?search_query=operational+transformation+vs+crdt | https://www.hellointerview.com/learn/system-design (collaborative editing) |
+| Blob store / S3 | [20](../02_system_design/classic_designs/20_blob_store_s3.md) | https://www.youtube.com/results?search_query=bytebytego+design+s3+object+storage | https://github.com/donnemartin/system-design-primer |
+| Distributed search | [21](../02_system_design/classic_designs/21_distributed_search.md) | https://www.youtube.com/results?search_query=elasticsearch+internals+inverted+index | https://www.elastic.co/blog (inverted index / sharding posts) |
+
+> For the original 8 (files 01–08), search `bytebytego <topic>` or `neetcode <topic> system design` on YouTube + the matching System Design Primer section.
+
+**Real-systems depth = your Confluent edge (the "Advanced" Grokking content, all free):**
+Read the primary papers — they're free PDFs and beat any course summary: **Kafka**, **Amazon Dynamo**, **Cassandra**, **Google Bigtable**, **GFS**, **Spanner**, **MapReduce**. Pair with the **Confluent**, **Uber**, **Netflix**, and **Stripe** engineering blogs (URLs in the Free table above). Search e.g. `kafka paper jay kreps the log` or `dynamo paper amazon`.
+
+**Legitimate ways to see the paid course free/cheap:** Educative offers a free 7-day trial + frequent 50–70% annual sales; Design Gurus discounts on Black Friday and via student email. Don't use pirated dumps — they're a known malware vector and infringe copyright.
+
 ### Paid (optional)
 | Resource | URL | Note |
 |----------|-----|------|
 | ByteByteGo | https://bytebytego.com | Alex Xu's books + newsletter; best bang/buck for SD |
-| Grokking the System Design Interview | https://www.designgurus.io | Classic designs well explained |
+| Grokking the System Design Interview | https://www.designgurus.io | The source course; Rahul's files 09–21 mirror its question bank |
+| Grokking (educative.io edition) | https://www.educative.io/courses/grokking-the-system-design-interview | Same course on educative; interactive |
+| "System Design Interview" Vol 1 & 2 | (books by Alex Xu) | Chapter-per-design; the best paid companion to your files |
 | "Designing Data-Intensive Applications" | (book by Martin Kleppmann) | The definitive reference; read chs 5-12 |
 
 ### If you only have time for 3 things:

@@ -14,11 +14,11 @@ Your home base for the coding-interview prep. DSA is **rusty, not weak** — so 
     ├── 02_hashing_frequency.md
     ├── ...
     ├── 19_bit_manipulation.md       ← end of the CORE 19
-    └── 20–26 (advanced add-ons)     ← matrix · math · OOD/LLD · advanced DP · strings · range queries · D&C
+    └── 20–27 (advanced add-ons)     ← matrix · math · OOD/LLD · advanced DP · strings · range queries · D&C · concurrency
 ```
 
-- **One file per pattern: 19 core + 7 advanced = 26 total**, under `patterns/`.
-- **Naming:** `NN_<snake_case_name>.md` where `NN` is a zero-padded two-digit index (`01`–`26`). The index is just a stable ordering for the tables below — it is *not* a difficulty or study order. **01–19 are the core spine**; **20–26 are advanced / company-specific add-ons** (see the second table).
+- **One file per pattern: 19 core + 8 advanced = 27 total**, under `patterns/`.
+- **Naming:** `NN_<snake_case_name>.md` where `NN` is a zero-padded two-digit index (`01`–`27`). The index is just a stable ordering for the tables below — it is *not* a difficulty or study order. **01–19 are the core spine**; **20–27 are advanced / company-specific add-ons** (see the second table).
 - Each pattern file follows the same internal shape: *when to reach for it → the core template (Python) → 6–10 representative problems (easy→hard, with company tags) → the 2–3 "gotcha" variants interviewers use to see if you actually understand it → recall drill.*
 - Keep solutions in your own words. A pattern file is "done" when you can reproduce the template from a blank page in under 3 minutes.
 
@@ -69,8 +69,9 @@ These cover the ~15% the core 19 don't fully reach. Study them **after** the cor
 | 24 | Advanced strings (KMP / Rabin-Karp) | ⚡ Google-hard, lower freq | 🔴 | [patterns/24_advanced_strings.md](patterns/24_advanced_strings.md) |
 | 25 | Prefix/difference arrays & range queries (Fenwick / segment tree) | 🔸 Medium core + Google/Uber-hard | 🔴 | [patterns/25_range_queries.md](patterns/25_range_queries.md) |
 | 26 | Divide & conquer, sorting & quickselect | 🔸 Medium-high — everyone | 🔴 | [patterns/26_divide_conquer_sorting.md](patterns/26_divide_conquer_sorting.md) |
+| 27 | Concurrency & multithreading (locks / conditions / semaphores / deadlock) | 🔥 High — **Uber, Atlassian**; Google/Amazon | 🔴 | [patterns/27_concurrency_multithreading.md](patterns/27_concurrency_multithreading.md) |
 
-**Where to spend first, by target:** **Atlassian** → 22 (OOD) is non-negotiable. **Google L5** → 20, 21, 23. **Banks (GS/JPM OA)** → 21, 26. **Amazon / Uber** → 20, 22, 26. Confluent leans more on systems/concurrency than exotic algorithms, so the core 19 + 22 + 26 cover it.
+**Where to spend first, by target:** **Atlassian** → 22 (OOD) + 27 (concurrency) are non-negotiable; also see [machine coding round](../02_system_design/machine_coding_round.md). **Google L5** → 20, 21, 23. **Banks (GS/JPM OA)** → 21, 26. **Amazon / Uber** → 20, 22, 26, 27. **Confluent** leans on systems/**concurrency** over exotic algorithms, so the core 19 + 22 + 26 + 27 cover it.
 
 ---
 

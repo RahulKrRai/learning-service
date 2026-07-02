@@ -7,7 +7,9 @@
 
 A complete, self-contained interview preparation system for **Rahul Kumar Rai** targeting a move from Logward (54 LPA, Senior Backend Engineer) to a senior big-tech / top-product role at Rs 95L-1.3Cr by ~September 2026. Built June 2026.
 
-**63 markdown files across 6 sections. The folder is COMPLETE and link-audited — all internal links resolve. DSA = 19 core patterns + 7 advanced add-ons (20–26).**
+**83 markdown files across 6 sections. The folder is COMPLETE and link-audited — all internal links resolve. DSA = 19 core patterns + 8 advanced add-ons (20–27, incl. concurrency). System design = 21 classic/Grokking designs (01–21) + 4 home designs + LLD + machine-coding round + project deep-dive Q&A.**
+
+**Added 2026-07-02 (gap-fill pass):** `01_dsa/patterns/27_concurrency_multithreading.md` (concurrency coding round — Uber/Atlassian), `02_system_design/machine_coding_round.md` (Atlassian-style build-working-code round), `02_system_design/project_deep_dive_qa.md` (defend-your-decisions Q&A for the 4 home projects), `00_strategy/practice_log.md` (spaced-repetition practice tracker + pattern heatmap + mistakes log).
 
 ---
 
@@ -76,17 +78,18 @@ interview_prep/
 │       ├── 18_greedy.md
 │       └── 19_bit_manipulation.md
 │
-├── 02_system_design/                 ← 16 files, COMPLETE
+├── 02_system_design/                 ← 30 files, COMPLETE (8 original classics + 13 Grokking designs 09–21 added 2026-06-21; engineering_hygiene.md added 2026-06-27)
 │   ├── README.md                     ← SD hub, framework overview
 │   ├── framework_and_estimation.md   ← 8-step framework, latency table, formulas, checklist
 │   ├── fundamentals.md               ← Building blocks (caching, Kafka deep, sharding, CAP, etc.)
 │   ├── low_level_design.md           ← LLD / object modeling: 5-step framework, design patterns, 5 worked designs (parking lot, elevator, Splitwise, vending machine, movie booking). For data-structure LLD see 01_dsa/patterns/22.
+│   ├── engineering_hygiene.md        ← Operational maturity: 12-factor app, deploy/release patterns, observability (3 pillars, RED/USE), SLI/SLO/SLA/error budgets, resilience patterns, production-readiness checklist (added 2026-06-27)
 │   ├── project_designs/              ← Rahul's 4 home designs (biggest edge)
 │   │   ├── 1_container_tracking_platform.md
 │   │   ├── 2_multitenant_trigger_service.md
 │   │   ├── 3_payment_links_reconciliation.md
 │   │   └── 4_autopay_recurring_scheduler.md
-│   └── classic_designs/              ← 8 classic designs
+│   └── classic_designs/              ← 21 designs (8 original + 13 Grokking)
 │       ├── 01_rate_limiter.md
 │       ├── 02_distributed_cache.md
 │       ├── 03_url_shortener.md
@@ -94,7 +97,20 @@ interview_prep/
 │       ├── 05_typeahead_autocomplete.md
 │       ├── 06_distributed_message_log_kafka.md  ← Deep; for Confluent
 │       ├── 07_ride_dispatch_matching.md          ← Deep; for Uber
-│       └── 08_distributed_job_scheduler.md
+│       ├── 08_distributed_job_scheduler.md
+│       ├── 09_chat_messaging_whatsapp.md         ← Grokking; WebSocket/delivery
+│       ├── 10_twitter_timeline.md                ← Grokking; hybrid fan-out
+│       ├── 11_video_streaming_youtube.md         ← Grokking; transcoding/CDN
+│       ├── 12_photo_sharing_instagram.md         ← Grokking; media pipeline
+│       ├── 13_file_storage_dropbox.md            ← Grokking; chunking/dedup/sync
+│       ├── 14_web_crawler.md                     ← Grokking; frontier/politeness; for Google
+│       ├── 15_proximity_service_yelp.md          ← Grokking; geo index; for Uber
+│       ├── 16_notification_system.md             ← Grokking; overlaps Rahul's prod Trigger Service
+│       ├── 17_ticketmaster_booking.md            ← Grokking; concurrency/no double-booking; for banks
+│       ├── 18_unique_id_generator.md             ← Grokking; Snowflake
+│       ├── 19_collaborative_editor_google_docs.md ← Grokking; OT vs CRDT; for Atlassian
+│       ├── 20_blob_store_s3.md                   ← Grokking; erasure coding; for Amazon
+│       └── 21_distributed_search.md              ← Grokking; inverted index; for Google
 │
 ├── 03_behavioral/                    ← 5 files, COMPLETE
 │   ├── README.md                     ← Hub, STAR format, rehearsal protocol

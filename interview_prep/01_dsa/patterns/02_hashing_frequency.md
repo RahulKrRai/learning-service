@@ -266,10 +266,10 @@ class Codec:
 ## Self-rating checklist
 - [ ] I can recognise this pattern in <30s
 - [ ] I can write the complement-lookup and prefix-sum templates from memory
-- [ ] Two Sum  -  🟡
-- [ ] Contains Duplicate  -  🟡
-- [ ] Valid Anagram  -  🟡
-- [ ] Group Anagrams  -  🟡
+- [Y] Two Sum  -  🟡
+- [Y] Contains Duplicate  -  🟡
+- [Y] Valid Anagram  -  🟡
+- [N] Group Anagrams  -  🟡
 - [ ] Top K Frequent Elements  -  🟡
 - [ ] Top K Frequent Words (tie-break)  -  🔴
 - [ ] Subarray Sum Equals K  -  🔴
